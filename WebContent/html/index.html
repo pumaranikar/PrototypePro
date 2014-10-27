@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>PrototypePro</title>
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+<script> 
+    $(function(){
+      $("#includedContent").load("html/layout/footer.html"); 
+    });
+</script> 
+
+<style type="text/css">
+h2{
+    margin: 0px;     
+    color: #666;
+    padding-top: 200px;
+    font-size: 52px;
+    font-family: "trebuchet ms", sans-serif;    
+}
+
+/* positioning img element */
+.item{
+    background: #232D37;    
+    text-align: center;
+    height: 570px !important;
+}
+/* Carousel base class */
+.carousel{
+	height: 560px;
+    margin-bottom: 10px;
+}
+.bs-example{
+	margin: 0px;
+}
+
+/* Special class on .container surrounding .navbar, used for poisitioning it into place */
+.navbar-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 20;
+}
+
+/* Flip around the padding for proper display in narrow viewports */
+.navbar-wrapper .container {
+  padding-left: 0;
+  padding-right: 0;
+}
+.navbar-wrapper .navbar {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+h3{
+	color: #FFFFFF;
+	font-size: 50px;
+}
+.parasize
+{
+	font-size: 30px;
+	font-weight: bold;
+}
+.navbar .nav.pull-right {
+     float: right;
+    margin-right: 50px; /*set margin this way in your custom styesheet*/
+  }
+.navbar-inverse .navbar-brand{
+	color:#3366CC; 
+}
+.navbar-inverse .navbar-nav>li>a{
+	color:#3366CC; 
+}
+  
+</style>
+</head>
+  <body style="background-color: #232D37;">
+    <div class="navbar-wrapper">
+      <div class="container">
+
+        <div class="navbar navbar-inverse navbar-static-top" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+               <a class="navbar-brand" style="padding-top:5px;"> 
+              <img src="img/logo.gif" alt="" style="float: right;position: relative;margin-top: 13%;  margin-right: 3%;cursor: pointer;  height: 30px;width: 30px"/>
+              </a>
+              <a class="navbar-brand" href="#">PrototypePro</a>
+            </div>
+            <div class="navbar-collapse collapse">
+              <ul class="nav navbar-nav">
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="html/contact.html">Contact</a></li>
+             <!--     <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Another action</a></li>
+                    <li><a href="#">Something else here</a></li>
+                    <li class="divider"></li>
+                    <li class="dropdown-header">Nav header</li>
+                    <li><a href="#">Separated link</a></li>
+                    <li><a href="#">One more separated link</a></li>
+                  </ul>
+                </li> -->
+              </ul>          
+            	<ul class="nav navbar-nav navbar-right" style="margin-right: 50px; font-color:#0033CC;">
+            		<li><a href="#">Sign In</a></li>
+            		<li><a href="html/test.html">Try Now</a></li>
+            		<li><a href="html/signup.html">Sign Up</a></li>
+            	</ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+<div class="bs-example">
+    <div id="myCarousel" class="carousel slide" data-interval="4000" data-ride="carousel">
+    	<!-- Carousel indicators -->
+        <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+        </ol>   
+       <!-- Carousel items -->
+        <div class="carousel-inner">
+            <div class="active item">
+            <div>
+               <img src="img/Web-Design.png" alt="" style="padding-top: 50px; width: 900px">
+            </div>
+                <div class="carousel-caption">
+                  <h3>Design Better Experience</h3>
+                  <div class="parasize">
+                  <p>A Prototyping Platform</p>
+                  </div>
+                </div>
+            </div>
+            <div class="item">
+            <div>
+               <img src="img/back2.jpg" alt="" style="padding-top: 55px; width: 1140px; height: 450px;">
+            </div>
+                <div class="carousel-caption" style="width: 1200px; margin-left: -200px;">
+                  <h3 style="font-size: 40px;">Prototype, Collaborate & Communicate
+                <button type="button" class="btn btn-primary" style="width: 150px; margin-left: 80px;">LEARN MORE >></button></h3>
+                </div>
+            </div>
+            <div class="item">
+             <div>
+               <img src="img/slide2.jpg" alt="" style="padding-top: 55px; width: 1140px; height: 470px;">
+            </div>
+                <div class="carousel-caption" align="left">
+                  <button type="button" class="btn btn-primary" style="width: 150px; margin-left: 0px;" onclick="document.location.href='html/test.html'">TRY Now</button>
+                  <button type="button" class="btn btn-primary" style="width: 150px; margin-left:300px;">BUY</button>
+                </div>
+            </div>
+        </div>
+        <!-- Carousel nav -->
+        <a class="carousel-control left" href="#myCarousel" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+        </a>
+        <a class="carousel-control right" href="#myCarousel" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right"></span>
+        </a>     
+    </div>
+     <div id="includedContent"> </div>
+</div>
+</body>
+</html>                                		

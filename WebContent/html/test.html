@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+	<script type="text/javascript" src="//cdn.jsdelivr.net/bootstrap.filestyle/1.1.0/js/bootstrap-filestyle.min.js" charset="utf-8"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <script type="text/javascript" src="../js/main.js"></script>
+    <script type="text/javascript" src="../js/fileContent.js"></script>
+    
+<style type="text/css">
+
+h5,h3,h2 {
+	color:#ffffff;
+}
+td, th {
+	padding: 4px;
+}
+.status2{
+			
+		}
+#btnhome
+{
+	margin-top:40%; margin-left:20%; width:100px;
+	position: fixed;
+}
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+   .status2
+	{
+		height: 300px;width: 400px
+	}
+	#btnhome
+	{
+		margin-top:40%; margin-left:20%; width:100px;
+	}
+}
+.navbar-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 20;
+}
+
+/* Flip around the padding for proper display in narrow viewports */
+.navbar-wrapper .container {
+  padding-left: 0;
+  padding-right: 0;
+}
+.navbar-wrapper .navbar {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+h3{
+	color: #FFFFFF;
+	font-size: 50px;
+}
+.parasize
+{
+	font-size: 30px;
+	font-weight: bold;
+}
+.navbar .nav.pull-right {
+     float: right;
+    margin-right: 50px; /*set margin this way in your custom styesheet*/
+  }
+.navbar-inverse .navbar-brand{
+	color:#3366CC; 
+}
+.navbar-inverse .navbar-nav>li>a{
+	color:#3366CC; 
+}
+ 
+</style>
+<script> 
+$(document).ready(function(){
+	  $('#btnSave').click(function(){
+	   alert('Please Sign In to save your work');
+	  });
+	});
+</script> 
+
+
+
+</head>
+<body style="background-color: #232D37; color:#ffffff">
+<div class="navbar-wrapper">
+      <div class="container">
+        <div class="navbar navbar-inverse navbar-static-top" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" style="padding-top:5px;"> 
+              <img src="../img/logo.gif" alt="" style="float: right;position: relative;margin-top: 13%;  margin-right: 3%;cursor: pointer;  height: 30px;width: 30px"/>
+              </a>
+              <a class="navbar-brand" href="#">PrototypePro</a>
+            </div>
+            <div class="navbar-collapse collapse">
+              <ul class="nav navbar-nav">
+                <li><a href="/PrototypePro">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="/PrototypePro/html/contact.html">Contact</a></li>
+             <!--     <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Another action</a></li>
+                    <li><a href="#">Something else here</a></li>
+                    <li class="divider"></li>
+                    <li class="dropdown-header">Nav header</li>
+                    <li><a href="#">Separated link</a></li>
+                    <li><a href="#">One more separated link</a></li>
+                  </ul>
+                </li> -->
+              </ul>          
+            	<ul class="nav navbar-nav navbar-right" style="margin-right: 50px; font-color:#0033CC;">
+            		<li><a href="#">Sign In</a></li>
+            		<li class="active"><a href="/PrototypePro/html/test.html">Try Now</a></li>
+            		<li><a href="/PrototypePro/html/signup.html" >Sign Up</a></li>
+            	</ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+<div id="divNavigator" style="float: left; position: absolute; margin-left: 30%; margin-top: 5%">
+    <div id="triangle-left" style="float: left; margin-left:-10%"></div>
+     <label id="lblImageName" style="position: absolute;margin-left: 35%"></label>
+    <div id="triangle-right" style="float: left; margin-left: 430px"></div>
+</div>
+<div id="helpmenu" style="float: right;position: absolute;display: none; margin-left: 70%; margin-top: 5%; width:330px;  ;">
+    <ul class="_">
+        <li>Click on Choose file and select sketches</li>
+        <li>Select the first image</li>
+        <li>Select an area on image to make it clickable</li>
+        <li>Choose the next image using "Select next screen" dropdown</li>
+        <li>Click on Add Event</li>
+        <li>Click on Preview</li>
+    </ul>
+</div>
+<div  id="main" style="position: relative">
+<div id="lsboxImages" style="margin-top:8%;float: left;position: relative;  border: 1px solid white; width: 22%;height:540px;overflow: auto;">
+   <!-- <div>Slide1
+    <img src="image/Slide1.JPG" name="Slide1" id="img1" width="250px" height="250px">
+    </div>
+    <div>Slide2
+    <img src="image/Slide2.JPG" name="Slide2" id="img2" width="250px" height="250px">
+    </div>-->
+
+</div>
+
+<div onmousedown="return false" id="YDR-Frame" class="frame" style="margin-left:6%">
+
+<img id="targetImage" src="../img/Sample.JPG"  name="" width="455px" height="455px">
+
+
+<div id="divDragable"></div>
+</div>
+
+<div id="help"><img src="../img/p-trans.gif" alt="" style="float: right;position: relative;margin-top: 13%;  margin-right: 3%;cursor: pointer;  height: 40px;width: 40px" title="Click here for help"/></div>
+<div class="status2" style="float: right;margin-right: 3%;  border: 1px solid white; ">
+<br>
+    <div style="float: left; position: absolute; margin-left: 5%; margin-right: 5%;class="btn btn-primary btn-file">
+        <input type="file" id="FileLocation" name="files[]" class="filestyle" data-buttonName="btn-primary" data-show-upload="false" data-show-caption="true" multiple>
+    </div>
+    <table width="100%" style="margin-left: 5%; margin-right: 5%;" >
+        <tr>
+            <td colspan="2" ><br/><br/><h5>Selection :</h5>
+
+                <div id="selection" class="selectiondiv" style="margin-left: 5%; margin-right: 5%;"></div>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <div>
+                    <select id="lsbox" name="lsbox" style="width:360px;background-color: #232D37;color: white;" multiple="">
+                        <option value="dragImage">Click and drag inside the image</option>
+                    </select>
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+            <h5>Select next screen :</h5>
+            </td>
+            <td>
+                <select id="imgSelect" name="imgSelect" style="min-width:210px; background: #E8EBEF;color: bLack;" >				
+                </select>
+            </td>
+        </tr>
+        <tr>	
+            <td colspan="2">
+	
+                <button id="btnAddEvent" class="btn btn-primary" style="margin-right:1%">Add Event</button>
+                <button id="btnRemoveEvent" class="btn btn-primary" style="margin-right:1%">Remove Event</button>
+                <button id="btnPreview" class="btn btn-primary" >Preview</button>
+                <button id="btnSave" class="btn btn-primary" style="">Save</button>
+            </td>
+        </tr>
+    </table>
+
+</div>
+ 
+</div>
+
+<div id="preview" style="display: none;">
+    <div>
+    <div title="Close" class="close">X</div>
+    <img id="previewImage"  width="455px" height="455px">
+    </div>
+    
+</div>
+
+</body>
+</html>
