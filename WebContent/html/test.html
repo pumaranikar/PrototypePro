@@ -69,10 +69,10 @@ h3{
     margin-right: 50px; /*set margin this way in your custom styesheet*/
   }
 .navbar-inverse .navbar-brand{
-	color:#3366CC; 
+	color:#c0d6d5; 
 }
 .navbar-inverse .navbar-nav>li>a{
-	color:#3366CC; 
+	color:#c0d6d5; 
 }
  
 </style>
@@ -124,7 +124,7 @@ $(document).ready(function(){
               </ul>          
             	<ul class="nav navbar-nav navbar-right" style="margin-right: 50px; font-color:#0033CC;">
             		<li><a href="#">Sign In</a></li>
-            		<li class="active"><a href="/PrototypePro/html/test.html">Try Now</a></li>
+            		<li class="active"><a href="/PrototypePro/html/test.html" style="color: yellow">Try Now</a></li>
             		<li><a href="/PrototypePro/html/signup.html" >Sign Up</a></li>
             	</ul>
             </div>
@@ -138,7 +138,7 @@ $(document).ready(function(){
      <label id="lblImageName" style="position: absolute;margin-left: 35%"></label>
     <div id="triangle-right" style="float: left; margin-left: 430px"></div>
 </div>
-<div id="helpmenu" style="float: right;position: absolute;display: none; margin-left: 70%; margin-top: 5%; width:330px;  ;">
+<div id="helpmenu" style="float: right;position: absolute;display: block; margin-left: 70%; margin-top: 5%; width:330px;  ;">
     <ul class="_">
         <li>Click on Choose file and select sketches</li>
         <li>Select the first image</li>
@@ -167,11 +167,11 @@ $(document).ready(function(){
 <div id="divDragable"></div>
 </div>
 
-<div id="help"><img src="../img/p-trans.gif" alt="" style="float: right;position: relative;margin-top: 13%;  margin-right: 3%;cursor: pointer;  height: 40px;width: 40px" title="Click here for help"/></div>
+<div id="help"><img src="../img/help.jpg" alt="" style="float: right;position: relative;margin-top: 13%;  margin-right: 3%;cursor: pointer;  height: 40px;width: 40px" title="Click here for help"/></div>
 <div class="status2" style="float: right;margin-right: 3%;  border: 1px solid white; ">
 <br>
     <div style="float: left; position: absolute; margin-left: 5%; margin-right: 5%;class="btn btn-primary btn-file">
-        <input type="file" id="FileLocation" name="files[]" class="filestyle" data-buttonName="btn-primary" data-show-upload="false" data-show-caption="true" multiple>
+        <input type="file" id="FileLocation" name="files[]" class="filestyle" data-buttonName="btn-primary" data-show-upload="false" data-show-caption="true" data-buttonText="Choose Files" multiple>
     </div>
     <table width="100%" style="margin-left: 5%; margin-right: 5%;" >
         <tr>

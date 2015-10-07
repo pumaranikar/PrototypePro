@@ -69,7 +69,7 @@ $( document ).ready(function() {
                 $('#selection').html('( x1 : ' + x1 + ' )  ( x2 : ' + x2 + ' )  ( y1 : ' + y1 + '  )  ( y2 : ' + y2 + ' )' );
                   //  +
                    // '  SPOS:' + TOP);
-
+                $("#imgSelect").focus();
             }
         }
     });
@@ -98,7 +98,8 @@ $( document ).ready(function() {
         if(x1 != undefined) {
             var selectedItem = $("#imgSelect option:selected").text();
             name=$("#YDR-Frame img:first-child").attr("name");
-            $("#lsbox").append('<option >['+name+',' + x1 + ' ,  ' + x2 + ' ,  ' + y1 + '  ,  ' + y2 + ' ,' + selectedItem + ']</option>');
+            $("#lsbox").append('<option value="['+name+',' + x1 + ' ,  ' + x2 + ' ,  ' + y1 + '  ,  ' + y2 + ' ,' + selectedItem + ']" >' +
+                '[From: '+name+' to: ' + selectedItem + ']</option>');
 
             index=findWithAttr(imageSource, 'Key', selectedItem)
             if(index+1<=imageSource.length) {
